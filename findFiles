@@ -1,0 +1,11 @@
+import os
+numFiles1 = 0
+numFiles2 = 0
+for (directoryName, directories, files) in os.walk('.'):
+	for filename in files:
+		if filename.endswith('.txt') :
+			numFiles1 = numFiles1 + 1
+		if filename.startswith('something'):
+			numFiles2 = numFiles2 + 1
+print 'Files ending with .txt:', numFiles1
+print 'Files starting with "something":', numFiles2
