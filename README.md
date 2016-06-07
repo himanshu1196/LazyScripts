@@ -1,2 +1,2 @@
 # LazyScripts
-This repository contains python scripts to automate several activities
+This repository contains various python scripts.
