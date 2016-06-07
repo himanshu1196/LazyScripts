@@ -5,7 +5,11 @@ for (directoryName, directories, files) in os.walk('.'):
 	for filename in files:
 		if filename.endswith('.txt') :
 			numFiles1 = numFiles1 + 1
-		if filename.startswith('something'):
+		if filename.startswith('somethingbad'):
 			numFiles2 = numFiles2 + 1
+			thefile = os.path.join(directoryName,filename)
+			size = os.path.getsize(thefile)
+			print("removing "+filename+" of size "+str(size))
+			os.remove(thefile)
 print 'Files ending with .txt:', numFiles1
-print 'Files starting with "something":', numFiles2
+print 'Files starting with "somethingbad":', numFiles2
